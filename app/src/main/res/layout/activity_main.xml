@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorBackground"
+        app:title="夕彩校园"
+        app:menu="@menu/main"
+        app:titleTextColor="@color/colorPrimaryText" />
+
+    <ImageView
+        android:id="@+id/code"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="56dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal" />
+    
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="156dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+        
+        <FrameLayout
+            android:id="@+id/fill_screen"
+            android:background="@drawable/bg_bar"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:elevation="8dp">
+    
+            <ImageView
+                android:id="@+id/fill_screen_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:alpha="0.7"
+                android:rotation="-90"
+                android:src="@drawable/ic_back" />
+
+        </FrameLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+    
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_brightness"
+                app:tint="#C8C8C8" />
+    
+            <SeekBar
+                style="@style/SeekBar"
+                android:id="@+id/main_brightness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="32dp"
+                android:minHeight="28dp"
+                android:max="255"
+                android:thumb="@null"
+                android:duplicateParentState="true" />
+
+        </LinearLayout>
+        
+        <Button
+            android:id="@+id/refresh_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:text="刷新条码" />
+    
+    </LinearLayout>
+
+</RelativeLayout>
